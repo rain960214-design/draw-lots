@@ -1,0 +1,86 @@
+/* 全局樣式重置 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #0e1111;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Landing Page 遮罩層 */
+#landing-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #1a1c29 0%, #0e1111 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* 隱藏 Landing Page 時使用的 CSS class */
+#landing-page.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* 提示卡片 */
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+h1 {
+    color: #00f2fe;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+.instructions {
+    color: #e0e0e0;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+/* 開始按鈕樣式 */
+#start-btn {
+    background: linear-gradient(45deg, #0093e9, #80d0c7);
+    border: none;
+    color: white;
+    padding: 12px 35px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#start-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 147, 233, 0.6);
+}
+
+/* p5.js 畫布居中 */
+canvas {
+    display: block;
+}
